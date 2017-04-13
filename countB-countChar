@@ -1,0 +1,26 @@
+var counter = 0;
+
+function countBs(string) {
+  
+for(var i = 0; i < string.length; i++) {
+    if(string.charAt(i) === "B") {
+    counter +=1;
+   }  
+  }
+console.log(counter);   
+}
+countBs("BBC");
+
+var counter = 0;
+
+function countChar(string, character) {
+  
+for(var i = 0; i < string.length; i++) {
+    if(string.charAt(i) === character) {
+    counter +=1;
+   }  
+  }
+console.log(counter);   
+}
+
+countChar("kakkerlak", "k");
