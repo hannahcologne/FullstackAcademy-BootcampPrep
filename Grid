@@ -1,0 +1,26 @@
+var myString = "";
+var size = 8;
+
+
+	for(var i = 0; i < size; i++) {
+		if(i%2 === 0) {
+			myString += " ";
+		} else {
+			myString +="#";
+		}
+	}
+
+
+	if(size) {
+		myString += "\n";
+		}
+	
+for(var h = 0; h < size; h++) {
+
+if(h%2 === 0) {
+		console.log(myString)
+	} else {
+		console.log(" " + myString);
+	}
+	
+}
