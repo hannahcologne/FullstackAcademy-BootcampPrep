@@ -1,0 +1,18 @@
+function range (start, end, step) {
+var myArray = [];
+
+if(step === undefined) {
+		step = 1;
+	}
+	
+for(var i = start; i <= end; i+= step) {
+myArray.push(i); 
+
+}
+
+console.log(myArray);
+
+}
+
+
+range(2,10,2);
