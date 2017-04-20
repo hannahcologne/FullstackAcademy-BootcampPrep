@@ -1,0 +1,35 @@
+/*
+Write a function makeGrid that accepts two dimensions and returns a grid with those dimensions. 
+Each "tile" of the grid should be composed of a number representing the column of that "tile".
+
+makeGrid(3,4);
+/* => [[1, 2, 3],
+       [1, 2, 3],
+       [1, 2, 3],
+       [1, 2, 3]]
+Note: The output may not be appear "square"-like as in the above, but
+the structure of the array should match.
+
+Bonus: Write a function removeColumns that accepts a grid (two-dimensional array) and number of columns to remove, and returns the new grid.
+
+removeColumns([[1, 2, 3],
+               [1, 2, 3],
+               [1, 2, 3],
+               [1, 2, 3]], 2);
+/* => [[1],
+       [1],
+       [1],
+       [1]]
+*/
+
+function removeColumns(grid, columnsToRemove) {
+  for(var i = 0; i < grid.length; i++) {
+    var removed = grid[i].splice((-1*columnsToRemove), columnsToRemove);
+  }
+  return(grid);
+}
+
+removeColumns([[1, 2, 3],
+               [1, 2, 3],
+               [1, 2, 3],
+               [1, 2, 3]], 2);
