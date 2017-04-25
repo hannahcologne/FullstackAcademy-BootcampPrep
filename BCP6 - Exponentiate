@@ -1,0 +1,13 @@
+/*Write a function exponentiate that accepts a number and a power to raise that number to. For the present, assume the power argument will always be a positive integer value.
+*/
+
+function exponentiate(number, power) {
+  var result = 1;
+  for (var i = 0; i < power; i++) {
+    result *= number;
+  }
+    return result;
+}
+
+//exponentiate(4, 3); // → 64
+//exponentiate(3, 4) // => 81
