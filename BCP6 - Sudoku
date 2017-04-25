@@ -1,0 +1,50 @@
+/*Project - Sudoku
+
+Sudoku is a logic puzzle played on a 9x9 grid subdivided into 9 3x3 subgrids. The player is presented a partially filled puzzle, and must complete it following these rules:
+
+Each column must contain the numbers 1-9 (no repeats!)
+Each row must contain the numbers 1-9 (no repeats!)
+Each 3x3 subgrid must contain the numbers 1-9 (no repeats!)
+*/
+
+/*GETTING STARTED
+
+To start, write the following functions:
+1. getRow: This function should accept two arguments: a sudoku grid (represented by an array of arrays) and a row index. The function should return an array containing the numbers in the specified row.
+*/
+
+function getRow(array, rowIndex) {
+  for(var i = 0; i < array.length; i++) {
+    return array[rowIndex];
+  }
+}
+
+/*
+2. getColumn: This function should accept a sudoku grid and a column index. The function should return an array containing the numbers in the specified column.
+*/
+
+function getColumn(grid, columnIndex) {
+  var column = [];
+  for(var i = 0; i < grid.length; i++){
+    column.push(grid[i][columnIndex]);
+  }
+  return column;
+}
+
+/*
+3. getGrid: This function should accept three arguments: a sudoku grid, and an x and y coordinate for one of the puzzle's 3x3 subgrids. The function should return an array with all the numbers in the specified subgrid.
+Remember that our puzzle is broken into 9 subgrids. In our coordinate system, (0,0) will represent the subgrid in the upper left, (1,0) will represent the upper-middle and so on.
+*/
+
+function getSection(grid, x, y) {
+  var column = [];
+  
+  for(var i = 0; i < 3; i++) {
+   for(var j = 0; j < 3; j++){
+      column.push(grid[i][j]);
+    }
+  }
+    return column;
+}
+
+
