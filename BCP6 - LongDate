@@ -1,0 +1,36 @@
+/*
+Long Date
+Write a function that accepts a date string formatted as "mm/dd/yyyy". The function should return that date in "long" format. The date "12/25/2016" would become "December 25, 2016".
+Your function should also accept dates in the "mm/dd/yy" format ("yy" versus "yyyy"). If the argument is in this format, assume the 20th century for year values above 20, and the 21st century for year values 20 and below.
+*/
+var arrayMonths = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+function longDate(str) {
+  var myNewString = "";
+  
+//Declare variables to be able able to build up final string more easily later  
+  var month = str.slice(0, str.indexOf("/"));
+  var date = str.slice(str.indexOf("/")+1, str.lastIndexOf("/"));
+  var year = str.slice(str.lastIndexOf("/")+1, str.length);
+
+//for loop to compare the months in the array arrayMonths with the first part of the input  
+   for(var i = 0; i < arrayMonths.length; i++) {
+    if(month-1 === i) {
+      myNewString += arrayMonths[i];
+    }
+   }
+// If/else statement to check if year consists of 4 or 2 numbers
+  if(year.length === 4) {
+    return myNewString + " " + date + ", " + year;
+    
+  } else if(year.length === 2 && year > 20) {
+    return myNewString + " " + date + ", " + "19" + year;
+    
+  } else if (year.length === 2 && year < 20) {
+    return myNewString + " " + date + ", " + "20" + year;
+  }
+}  
+
+longDate('12/25/2016');    // => "December 25, 2016"
+//longDate('4/1/16')    // => "April 1, 2016"
+//longDate('7/12/55')    // => "July 12, 1955"
