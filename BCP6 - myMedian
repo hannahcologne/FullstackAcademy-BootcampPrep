@@ -1,0 +1,53 @@
+/*Median of Means
+You are a teacher and would like to calculate the median grade of your three students. Each student's grade is caclulated as the mean of their three test scores.
+Write two functions mean and median. Both functions should accept three arguments and calculate the mean and median respectively. Try to include only one return statement in each function.
+Test your two functions by calculating the median grade for the class below. The class is represented as an array of arrays, where each inner array represents a student, and contains their three test scores.
+*/
+// calculate mean of nested arrays
+// calculate median of these three numbers
+
+/*Median of Means
+You are a teacher and would like to calculate the median grade of your three students. Each student's grade is caclulated as the mean of their three test scores.
+Write two functions mean and median. Both functions should accept three arguments and calculate the mean and median respectively. Try to include only one return statement in each function.
+Test your two functions by calculating the median grade for the class below. The class is represented as an array of arrays, where each inner array represents a student, and contains their three test scores.
+*/
+
+var averageArray = [];
+  
+function mean(myArray) {
+
+  var totalOne = 0;
+  var totalTwo = 0;
+  var totalThree = 0;
+
+// add up numbers in nested arrays to calculate average
+  for(var i = 0; i < myArray.length; i++) {
+    for(var j = 0; j < 1; j++) {
+      totalOne += myArray[j][i];
+    }
+    for(var k = 1; k < 2; k++) {
+        totalTwo += myArray[k][i];
+    }
+    for(var l = 2; l < 3; l++) {
+        totalThree += myArray[l][i];
+    }
+  }
+  
+//push all averages to a new array
+  averageArray.push(Math.round(totalOne/3));
+  averageArray.push(Math.round(totalTwo/3));
+  averageArray.push(Math.round(totalThree/3));
+  return(averageArray);
+}
+
+var myClass = mean([[93, 73, 98], [54, 87, 63], [99, 45, 78]]);
+
+// calculate median of these three numbers
+
+function median(array) {
+  var sortedArray = array.sort();
+  return sortedArray[1];
+}
+
+median(myClass);
+
