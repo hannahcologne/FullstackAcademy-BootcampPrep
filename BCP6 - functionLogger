@@ -1,0 +1,19 @@
+/*
+Function Logger
+It's important to remember that functions can accept arguments of any type. Thus far, the functions we've written expect numbers, strings, or booleans as arguments, but functions can also accept the higher order data types, including other functions.
+Write a function functionLogger that accepts a function to run and an argument to pass to that function. Your functionLogger should log the message "Function starting", run the function, log "Function complete", and return the result of the function call.
+*/
+
+function functionLogger(squareNum, x) {
+  console.log("function starting");
+  console.log("function complete");
+   return squareNum(x);
+}
+
+function squareNum(x) {
+  return x*x; 
+}
+
+var squareOfFour = functionLogger(squareNum, 4);
+console.log(squareOfFour);    // 16
+ 
