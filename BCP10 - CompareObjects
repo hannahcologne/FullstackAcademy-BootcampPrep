@@ -1,0 +1,23 @@
+/*In order for the function to return true, ALL the properties that exist in object 1 must exist and be equal to those in object 2. Similarly, ALL the properties in object 2 must exist and be equal to those in object 1.
+*/
+
+function compareObjects(obj1, obj2) {
+
+  var compareArray = [];
+  //push values of objects to array using Objects.values;
+  for(var i = 0; i < arguments.length; i++) {
+    compareArray.push(Object.values(arguments[i]).toString());
+  }
+
+  if(compareArray[0] === compareArray[1]) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+compareObjects({ name: 'giselle' }, { name: 'zeke' });
+        // -> false
+
+//compareObjects({ name: 'nick' }, { name: 'nick' });
+        // -> true
