@@ -57,7 +57,7 @@ function classCheck(str) {
   
  //if weekday returns true, push the student for which it holds true to newArr
   for(var i = 0; i < classRoom.length; i++) {
-    firstName = Object.keys(classRoom[i]);
+    firstName = Object.keys(classRoom[i]).toString();
 
     if(classRoom[i][firstName][weekDays[str]][str] === true) {
       newArr.push(firstName);
