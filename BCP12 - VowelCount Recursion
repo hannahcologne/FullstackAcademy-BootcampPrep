@@ -1,0 +1,24 @@
+/*
+Count Vowels
+Write a function that accepts a string and returns the number of vowels in that string. Use recursion.
+*/
+
+var totalVowels = 0;
+
+function addVowels(num) {
+
+  if(num !== -1) {
+    totalVowels +=1;
+  }
+}
+
+function countVowels(str) {
+  var vowelstring = "aeuoi";
+  
+  for(var i = 0; i < str.length; i++) {
+    addVowels(vowelstring.indexOf(str[i])); //call addVowels function for every i
+  }
+ return totalVowels;
+}
+
+countVowels('Four score and seven years')    // => 9
