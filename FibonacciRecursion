@@ -1,0 +1,23 @@
+/*Fibonacci
+Create a function that takes a number n and returns the nth number in the Fibonacci sequence. The Fibonacci sequence is a series of numbers in which each number is the sum of the two numbers preceding it.
+ex: 1, 1, 2, 3, 5, 8, 13, 21, 34, 55....
+*/
+
+var fiboArr = [1,1];
+var numInFibonacciSequence = [];
+
+function returnIndex(number) {
+  numInFibonacciSequence = fiboArr.pop();
+}
+
+//function to create array with all fibonacci numbers
+function fibonacci(n) {
+
+  for(var i = 0; i < n-2; i++) { // array starts off with two values;
+    fiboArr.push(fiboArr[i] + fiboArr[i+1]); 
+  }
+  returnIndex(fiboArr[i] + fiboArr[i+1]); 
+  return numInFibonacciSequence;
+}
+
+fibonacci(6)    // => 8
